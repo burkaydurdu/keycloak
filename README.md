@@ -12,6 +12,19 @@ This allows a single installation of Keycloak to be used for multiple purposes.
 For example, you may want to have one realm for internal applications and employees,
 and another realm for external applications and customers.
 
+### Client
+> Clients are entities that can request Keycloak to authenticate a user.
+Most often, clients are applications and services that want to use 
+Keycloak to secure themselves and provide a single sign-on solution.
+Clients can also be entities that just want to request identity
+information or an access token so that they can securely invoke other
+services on the network that are secured by Keycloak.
+
+### Client Scopes
+> When a client is registered, you must define protocol mappers and role scope mappings for that client.
+It is often useful to store a client scope, to make creating new clients easier by sharing some common
+settings. This is also useful for requesting some claims or roles to be conditionally based on the value of
+the scope parameter. Keycloak provides the concept of a client scope for this.
 
 ## Authorization
 
@@ -39,4 +52,5 @@ kubectl apply -f keycloak.yml
 ```
 
 ## References
-[Keycloak - Identity and Access Management for Modern Applications](https://www.amazon.com/Keycloak-Management-Applications-protocols-applications/dp/1800562497)
+[Keycloak - Identity and Access Management for Modern Applications](https://www.amazon.com/Keycloak-Management-Applications-protocols-applications/dp/1800562497) </br>
+[Keycloak Official Web Site](https://www.keycloak.org)
